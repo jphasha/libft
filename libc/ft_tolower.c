@@ -6,11 +6,11 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 12:00:39 by jphasha           #+#    #+#             */
-/*   Updated: 2019/05/20 16:24:29 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/05/21 07:40:22 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(unsigned char c)
+char	ft_tolower(unsigned char c)
 {
 	if (c >= 'A' && c <= 'Z')
 	{
