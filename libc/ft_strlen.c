@@ -6,16 +6,16 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 09:55:21 by jphasha           #+#    #+#             */
-/*   Updated: 2019/05/20 10:00:24 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/05/22 16:56:45 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+size_t	ft_strlen(char *s)
 {
 	int i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (s[i] != '\0')
 	{
 		i++;
 	}

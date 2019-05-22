@@ -6,20 +6,20 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 15:10:44 by jphasha           #+#    #+#             */
-/*   Updated: 2019/05/21 15:59:37 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/05/22 16:53:00 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *s1, const char *s2, size_t n)
+char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
 	int i;
 
 	i = 0;
-	if (s2[i] != '\0' && (i < n))
+	if (src[i] != '\0' && (i < len))
 	{
-		s1[i] = s2[i];
+		dst[i] = src[i];
 		i++;
 	}
-	s1[i] != '\0';
-	return (s1);
+	dst[i] != '\0';
+	return (dst);
 }

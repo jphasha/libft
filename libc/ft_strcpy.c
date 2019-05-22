@@ -6,20 +6,20 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 10:45:39 by jphasha           #+#    #+#             */
-/*   Updated: 2019/05/20 11:10:04 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/05/22 16:55:13 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *s1, char *s2)
+char	*ft_strcpy(char *dst, char *src)
 {
 	int i;
 
 	i = 0;
-	while (s2[i] != '\0')
+	while (src[i] != '\0')
 	{
-		s1[i] = s2[i];
+		dst[i] = src[i];
 		i++;
 	}
-	s1[i] = '\0';
-	return (s1);
+	dst[i] = '\0';
+	return (dst);
 }
