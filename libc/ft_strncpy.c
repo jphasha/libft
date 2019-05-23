@@ -6,13 +6,13 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 15:10:44 by jphasha           #+#    #+#             */
-/*   Updated: 2019/05/22 16:53:00 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/05/23 08:56:01 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	if (src[i] != '\0' && (i < len))
