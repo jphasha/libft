@@ -6,7 +6,7 @@
 #    By: jphasha <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/25 01:45:05 by jphasha           #+#    #+#              #
-#    Updated: 2019/05/27 09:45:17 by jphasha          ###   ########.fr        #
+#    Updated: 2019/05/27 09:50:26 by jphasha          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,4 +29,4 @@ $(OBJECTS): $(SOURCES)
 	CC flags -c -o $(SOURCES)
 
 clean:
-	rm -f $(objects)
+	rm -f $(OBJECTS)
