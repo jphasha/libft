@@ -6,7 +6,7 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 23:24:42 by jphasha           #+#    #+#             */
-/*   Updated: 2019/05/25 00:29:14 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/05/27 07:36:51 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,7 @@
 # define LIBFT_H
 
 # include <unistd.h>
-# include <stdio.h>
 # include <string.h>
-# include <ctype.h>
 # include <stdlib.h>
 
 size_t	ft_strlen(const char *s);
