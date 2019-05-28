@@ -6,7 +6,7 @@
 #    By: jphasha <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/25 01:45:05 by jphasha           #+#    #+#              #
-#    Updated: 2019/05/27 09:50:26 by jphasha          ###   ########.fr        #
+#    Updated: 2019/05/28 15:32:15 by jphasha          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,19 +14,28 @@ NAME = libft.a
 
 CC = gcc
 
-SOURCES = ft_isalpha.c ft_isprint.c ft_strlen.c ft_strcpy.c ft_tolower.c ft_toupper.c ft_strncpy.c \
-		  ft_isascii.c ft_isalnum.c ft_isdigit.c ft_strcmp.c ft_strncmp.c
+SOURCES = ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c \
+		  ft_strcat.c ft_strncat.c ft_strcmp.c ft_strncmp.c ft_strcpy.c \
+		  ft_strncpy.c ft_strlen.c ft_tolower.c ft_toupper.c
+		
 
-OBJECTS = ft_isalpha.o ft_isprint.o ft_strlen.o ft_strcpy.o ft_tolower.o ft_toupper.o ft_strncpy.o \
-		  ft_isascii.o ft_isalnum.o ft_isdigit.o ft_strcmp.o ft_strncmp.o
+OBJECTS = ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o ft_isprint.o \
+		  ft_strcat.o ft_strncat.o ft_strcmp.o ft_strncmp.o ft_strcpy.o \
+		  ft_strncpy.o ft_strlen.o ft_tolower.o ft_toupper.o
 
 flags = -Wall -Wextra -Werror
 
-$(NAME): $(OBJECTS)
-	CC -o $(NAME) $(OBJECTS)
+all: $(NAME)
 
-$(OBJECTS): $(SOURCES)
-	CC flags -c -o $(SOURCES)
+$(NAME):
+	@$(CC) -c $(SOURCES) $(flags) 
+	@ar rc $(NAME) $(OBJECTS)
+	@ranlib $(NAME)
 
 clean:
-	rm -f $(OBJECTS)
+	@rm -f $(OBJECTS)
+
+fclean: clean
+	@rm -f $(NAME)
+
+re: fclean all
