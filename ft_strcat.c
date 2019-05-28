@@ -6,7 +6,7 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 10:36:04 by jphasha           #+#    #+#             */
-/*   Updated: 2019/05/28 10:44:45 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/05/28 11:47:52 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ char	*ft_strcat(char *restrict s1, const char *restrict s2)
 	{
 		i++;
 	}
+	j = 0;
 	while (s2[j] != '\0')
 	{
 		s1[i] = s2[j];
