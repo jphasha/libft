@@ -6,7 +6,7 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/04 16:34:52 by jphasha           #+#    #+#             */
-/*   Updated: 2019/06/05 15:53:50 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/06/07 09:28:33 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,29 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int i;
-	int firstocc;
-	char *strptr;
-	char ch;
+	char *caster;
+	char oc;
+	size_t oppos;
+	size_t firstocc;
 
-	i = 0;
-	while (s[i] != '\0')
+	caster = (char *)s;
+	oc = (char)c;
+	oppos = ft_strlen(s);
+	while (oppos > 0)
 	{
-		strptr = (char *)s;
-		ch = c;
-		if (strptr[i] == ch)
+		if (c == '\0')
 		{
-			return (&strptr[i++]);
+			return (caster + oppos);
 		}
-		i++;
+		else if (caster[oppos] == c)
+		{
+			firstocc = oppos;
+		}
+		else if (firstocc >= oppos && oppos == 1)
+		{
+			return (caster + oppos);
+		}
+		oppos--;
 	}
-	return (0);
+	return (NULL);
 }
