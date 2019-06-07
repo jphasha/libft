@@ -6,7 +6,7 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/04 16:34:52 by jphasha           #+#    #+#             */
-/*   Updated: 2019/06/07 09:28:33 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/06/07 09:48:04 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,11 @@ char	*ft_strchr(const char *s, int c)
 		{
 			firstocc = oppos;
 		}
-		else if (firstocc >= oppos && oppos == 1)
-		{
-			return (caster + oppos);
-		}
 		oppos--;
+	}
+	if (firstocc >= oppos && oppos == 0)
+	{
+		return (caster + oppos);
 	}
 	return (NULL);
 }
