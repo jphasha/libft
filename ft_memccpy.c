@@ -12,6 +12,7 @@ void	*ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t n)
 	psrc = (unsigned char *)src;
 	oc = c;
 	dstit = 0;
+	srcit = 0;
 	while (pdst[dstit])
 	{
 		if (psrc[srcit] && srcit < n && dstit < n)
