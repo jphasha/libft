@@ -25,6 +25,7 @@ void	ft_putendl(char const *s);
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_strclr(char *s);
 void	*ft_memchr(const void *s, int c, size_t n);
+void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strstr(const char *haystack, const char *needle);
