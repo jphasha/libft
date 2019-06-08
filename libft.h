@@ -23,6 +23,8 @@ void	ft_putstr(char const *str);
 void	ft_putstr_fd(char const *str, int fd);
 void	ft_putendl(char const *s);
 void	ft_putendl_fd(char const *s, int fd);
+void	*ft_memchr(const void *s, int c, size_t n);
+char	ft_strclr(char *s);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strstr(const char *haystack, const char *needle);
