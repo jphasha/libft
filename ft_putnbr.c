@@ -6,11 +6,11 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 14:15:57 by jphasha           #+#    #+#             */
-/*   Updated: 2019/06/10 14:50:55 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/06/10 16:34:34 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft"
+#include "libft.h"
 
 void	ft_putnbr(int n)
 {
