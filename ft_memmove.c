@@ -6,7 +6,7 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 10:36:29 by jphasha           #+#    #+#             */
-/*   Updated: 2019/06/10 10:50:55 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/06/11 10:15:04 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,17 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
+	size_t i;
+	unsigned char *pdst;
+	unsigned char *psrc;
+
+	pdst = (unsigned char *)dst;
+	psrc = (unsigned char *)src;
+	i = 0;
+	while (i < len)
+	{
+		pdst[i] = psrc[i];
+		i++;
+	}
 	return (dst);
 }
