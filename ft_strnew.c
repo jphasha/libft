@@ -6,7 +6,7 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/12 15:28:37 by jphasha           #+#    #+#             */
-/*   Updated: 2019/06/12 16:18:09 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/06/13 14:09:23 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strnew(size_t size)
 	size_t i;
 
 	i = 0;
-	str = (char *)malloc(size);
+	str = (char *)malloc(size + 1);
 	if (str == NULL)
 	{
 		return (NULL);
