@@ -6,7 +6,7 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 23:24:42 by jphasha           #+#    #+#             */
-/*   Updated: 2019/06/12 17:55:11 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/06/13 14:47:28 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void	ft_putstr_fd(char const *str, int fd);
 void	ft_putendl(char const *s);
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_putnbr(int n);
+void	ft_putnbr_fd(int n, int fd);
 void	ft_strclr(char *s);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
