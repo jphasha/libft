@@ -6,7 +6,7 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/12 17:41:46 by jphasha           #+#    #+#             */
-/*   Updated: 2019/06/12 17:53:10 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/06/13 10:21:43 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,39 @@
 char	*ft_strtrim(char const *s)
 {
 	size_t i;
-	char *cpstr;
+	char *ps;
+	char *cs;
+	size_t len;
+	size_t msi;
+	size_t csi;
 
 	i = 0;
-	cpstr = (char *)malloc(+1);
-	if (cpstr == NULL)
+	ps = (char *)s;
+	len = ft_strlen(s);
+	while (ps[i] != '\0')
+	{
+		while (ps[i] == ' ' || ps[i] == ',' || ps[i] == '\t')
+		{
+			i++;
+		}
+		while (len > i && (ps[len] == ' ' || ps[len] == ',' || ps[len] == '\t'))
+		{
+			len--;
+		}
+	}
+	msi = len - i + 1;
+	cs = (char *)malloc(msi);
+	if (cs == NULL)
 	{
 		return (NULL);
 	}
-	while (s[i] != '\0')
+	csi = 0;
+	while (csi < msi)
 	{
-		if 
+		cs[csi] = ps[i];
+		csi++;
 		i++;
 	}
-	cpstr[i] = '\0';
-	return (cpstr);
+	cs[csi] = '\0';
+	return (cs);
 }
