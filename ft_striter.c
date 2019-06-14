@@ -6,7 +6,7 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/14 08:15:59 by jphasha           #+#    #+#             */
-/*   Updated: 2019/06/14 09:02:09 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/06/14 09:23:48 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_striter(char *s, void (*f)(char *))
 	i = 0;
 	if (!s || !f)
 	{
-		return (NULL);
+		return ;
 	}
 	while (s[i] != '\0')
 	{
