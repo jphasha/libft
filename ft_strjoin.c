@@ -6,7 +6,7 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/12 15:10:38 by jphasha           #+#    #+#             */
-/*   Updated: 2019/06/12 17:36:16 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/06/14 16:25:04 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t i;
-	size_t j;
-	char *newstr;
+	size_t	i;
+	size_t	j;
+	char	*newstr;
 
 	i = 0;
 	j = 0;
