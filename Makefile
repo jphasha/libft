@@ -6,7 +6,7 @@
 #    By: jphasha <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/25 01:45:05 by jphasha           #+#    #+#              #
-#    Updated: 2019/06/14 09:45:21 by jphasha          ###   ########.fr        #
+#    Updated: 2019/06/14 10:31:53 by jphasha          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SOURCES = ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c \
 		  ft_memchr.c ft_strclr.c ft_memcpy.c ft_memccpy.c ft_memcmp.c ft_putnbr.c \
 		  ft_memset.c ft_memmove.c ft_bzero.c ft_atoi.c ft_strnew.c ft_strsub.c \
 		  ft_strjoin.c ft_strtrim.c ft_putnbr_fd.c ft_memalloc.c ft_striter.c \
-		  ft_striteri.c
+		  ft_striteri.c ft_strmap.c
 
 OBJECTS = ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o ft_isprint.o \
 		  ft_strcat.o ft_strncat.o ft_strcmp.o ft_strncmp.o ft_strcpy.o \
@@ -32,7 +32,7 @@ OBJECTS = ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o ft_isprint.o \
 		  ft_memchr.o ft_strclr.o ft_memcpy.o ft_memccpy.o ft_memcmp.o ft_putnbr.o \
 		  ft_memset.o ft_memmove.o ft_bzero.o ft_atoi.o ft_strnew.o ft_strsub.o \
 		  ft_strjoin.o ft_strtrim.o ft_putnbr_fd.o ft_memalloc.o ft_striter.o \
-		  ft_striteri.o
+		  ft_striteri.o ft_strmap.o
 
 flags = -Wall -Wextra -Werror
 
