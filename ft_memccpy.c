@@ -6,7 +6,7 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 09:21:17 by jphasha           #+#    #+#             */
-/*   Updated: 2019/06/14 15:41:58 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/06/14 16:40:16 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 			}
 			pdst[i] = psrc[i];
 		}
-		i;
+		i++;
 	}
 	pdst[i] = '\0';
 	return (dst);
