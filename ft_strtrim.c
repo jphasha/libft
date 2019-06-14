@@ -6,7 +6,7 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/12 17:41:46 by jphasha           #+#    #+#             */
-/*   Updated: 2019/06/13 10:21:43 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/06/14 16:27:31 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 char	*ft_strtrim(char const *s)
 {
-	size_t i;
-	char *ps;
-	char *cs;
-	size_t len;
-	size_t msi;
-	size_t csi;
+	size_t	i;
+	char	*ps;
+	char	*cs;
+	size_t	len;
+	size_t	msi;
+	size_t	csi;
 
 	i = 0;
 	ps = (char *)s;
