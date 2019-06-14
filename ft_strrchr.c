@@ -6,7 +6,7 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/04 17:09:23 by jphasha           #+#    #+#             */
-/*   Updated: 2019/06/07 08:37:11 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/06/14 16:03:59 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char *caster;
-	char oc;
-	size_t oppos;
+	char	*caster;
+	char	oc;
+	size_t	oppos;
 
 	caster = (char *)s;
 	oc = (char)c;
