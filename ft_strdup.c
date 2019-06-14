@@ -6,7 +6,7 @@
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/04 10:17:24 by event             #+#    #+#             */
-/*   Updated: 2019/06/04 11:33:39 by event            ###   ########.fr       */
+/*   Updated: 2019/06/14 15:53:25 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strdup(const char *src)
 {
-	int i;
-	char *srccpy;
+	int		i;
+	char	*srccpy;
 
 	srccpy = (char *)malloc(sizeof(char *) * (ft_strlen(src) + 1));
 	i = 0;
