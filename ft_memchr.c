@@ -6,7 +6,7 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 09:21:35 by jphasha           #+#    #+#             */
-/*   Updated: 2019/06/10 09:21:38 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/06/14 15:47:41 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char *str;
-	unsigned char cb;
-	size_t i;
+	unsigned char	*str;
+	unsigned char	cb;
+	size_t			i;
 
 	str = (unsigned char *)s;
 	cb = (unsigned char)c;
