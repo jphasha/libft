@@ -6,7 +6,7 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/14 09:47:50 by jphasha           #+#    #+#             */
-/*   Updated: 2019/06/14 10:32:55 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/06/14 16:15:39 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {
-	size_t i;
-	size_t j;
-	char *fs;
+	size_t	i;
+	size_t	j;
+	char	*fs;
 
 	i = 0;
 	j = 0;
