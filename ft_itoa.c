@@ -6,7 +6,7 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/17 08:10:48 by jphasha           #+#    #+#             */
-/*   Updated: 2019/06/17 08:53:42 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/06/17 09:20:06 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ char	*ft_itoa(int n)
 
 	numlen = ft_strlen(ft_atoi(n));
 	str = (char *)malloc(sizeof(char) * (numlen + 1));
+	i = 0;
 	if (str == NULL)
 	{
 		return (NULL);
@@ -29,4 +30,17 @@ char	*ft_itoa(int n)
 		n = n * -1;
 		str[i] = '-';
 	}
+	if (n == 0)
+	{
+		str[i] = '0';
+	}
+	if (numlen > 0)
+	{
+		i = numlen;
+	}
+	while (n >= 0)
+	{
+		str[i] = '\0';
+		i--;
+		str[i] = '0' + (n % 10);
 
