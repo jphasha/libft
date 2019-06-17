@@ -6,7 +6,7 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/17 08:10:48 by jphasha           #+#    #+#             */
-/*   Updated: 2019/06/17 09:23:19 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/06/17 09:28:46 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_itoa(int n)
 {
-	char	*str;
+	char		*str;
 	size_t		i;
 	size_t		numlen;
 
