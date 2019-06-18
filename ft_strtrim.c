@@ -6,7 +6,7 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/12 17:41:46 by jphasha           #+#    #+#             */
-/*   Updated: 2019/06/14 16:27:31 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/06/18 16:18:12 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,40 +14,44 @@
 
 char	*ft_strtrim(char const *s)
 {
-	size_t	i;
-	char	*ps;
 	char	*cs;
-	size_t	len;
-	size_t	msi;
-	size_t	csi;
-
+	size_t	size;
+	size_t	x;
+	size_t	i;
+	size_t	j;
+	
+	j = ft_strlen(s) - 1;
 	i = 0;
-	ps = (char *)s;
-	len = ft_strlen(s);
-	while (ps[i] != '\0')
+	if (s == NULL)
 	{
-		while (ps[i] == ' ' || ps[i] == ',' || ps[i] == '\t')
-		{
-			i++;
-		}
-		while (len > i && (ps[len] == ' ' || ps[len] == ',' || ps[len] == '\t'))
-		{
-			len--;
-		}
+		return (NULL);
 	}
-	msi = len - i + 1;
-	cs = (char *)malloc(msi);
+	while (((s[i] == '\t') || (s[i] == '\n') || (s[i] == ' ')) && s[i] != '\0')
+	{
+		i++;
+	}
+	while (s[j] != '\0')
+	{
+		j++;
+	}
+	j--;
+	while (((s[j] == ' ') || (s[j] == '\n') || (s[j] == '\t'	)) && j >= 0)
+	{
+		j--;
+	}
+	size = j - i + 1;
+	cs = (char *)malloc(sizeof(char) * (size + 1));
 	if (cs == NULL)
 	{
 		return (NULL);
 	}
-	csi = 0;
-	while (csi < msi)
+	x = 0;
+	while (i <= j)
 	{
-		cs[csi] = ps[i];
-		csi++;
+		cs[x] = s[i];
+		x++;
 		i++;
 	}
-	cs[csi] = '\0';
+	cs[x] = '\0';
 	return (cs);
 }
