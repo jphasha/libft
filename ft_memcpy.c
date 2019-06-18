@@ -6,7 +6,7 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 09:20:55 by jphasha           #+#    #+#             */
-/*   Updated: 2019/06/18 10:19:45 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/06/18 16:43:37 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,15 @@ void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 	pdst = (unsigned char *)dst;
 	psrc = (unsigned char *)src;
 	i = 0;
-	if (dst && src)
+	if (n == 0 || dst == src)
 	{
-		while (i < n)
-		{
-			pdst[i] = psrc[i];
-			i++;
-		}
 		return (dst);
 	}
-	return (NULL);
+	while (--n)
+	{
+		pdst[i] = psrc[i];
+		i++;
+	}
+	pdst[i] = psrc[i];
+	return (dst);
 }
