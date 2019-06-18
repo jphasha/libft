@@ -6,7 +6,7 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/12 15:53:32 by jphasha           #+#    #+#             */
-/*   Updated: 2019/06/14 16:21:23 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/06/18 11:33:51 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	size_t	i;
 
 	i = 0;
+	if (s == NULL)
+	{
+		return (NULL);
+	}
 	substr = (char *)malloc(len + 1);
 	if (substr == NULL)
 	{
