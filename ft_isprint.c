@@ -6,11 +6,11 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 14:05:40 by jphasha           #+#    #+#             */
-/*   Updated: 2019/05/23 14:07:49 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/06/19 09:05:42 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(unsigned char c)
+int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
 	{

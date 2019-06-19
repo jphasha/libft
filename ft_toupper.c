@@ -6,11 +6,11 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 16:31:53 by jphasha           #+#    #+#             */
-/*   Updated: 2019/05/22 11:23:59 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/06/19 09:06:30 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(unsigned char c)
+int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 	{

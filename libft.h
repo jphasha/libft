@@ -6,7 +6,7 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 23:24:42 by jphasha           #+#    #+#             */
-/*   Updated: 2019/06/18 11:24:36 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/06/19 09:10:35 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,13 +53,13 @@ char	*ft_strtrim(char const *s);
 char	*ft_strmap(char const *s, char (*f)(char));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int		ft_atoi(const char *str);
-int		ft_tolower(unsigned char c);
-int		ft_toupper(unsigned char c);
-int		ft_isalpha(unsigned char c);
-int		ft_isprint(unsigned char c);
+int		ft_tolower(int c);
+int		ft_toupper(int c);
+int		ft_isalpha(int c);
+int		ft_isprint(int c);
 int		ft_isascii(int c);
-int		ft_isalnum(unsigned char c);
-int		ft_isdigit(unsigned char c);
+int		ft_isalnum(int c);
+int		ft_isdigit(int c);
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_strequ(char const *s1, char const *s2);

@@ -6,18 +6,15 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 12:00:39 by jphasha           #+#    #+#             */
-/*   Updated: 2019/05/22 11:23:22 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/06/19 09:07:37 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(unsigned char c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 	{
 		return (c += 32);
 	}
-	else
-	{
-		return (c);
-	}
+	return (c);
 }

@@ -6,11 +6,11 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 16:56:21 by jphasha           #+#    #+#             */
-/*   Updated: 2019/05/23 16:58:31 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/06/19 08:58:09 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(unsigned char c)
+int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
 	{

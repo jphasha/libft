@@ -6,17 +6,19 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 17:21:19 by jphasha           #+#    #+#             */
-/*   Updated: 2019/05/24 08:53:12 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/06/19 09:08:38 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(unsigned char c)
+#include "libft.h"
+
+int	ft_isalnum(int c)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	if (ft_isalpha(c))
 	{
 		return (1);
 	}
-	else if (c >= '0' && c <= '9')
+	else if (ft_isdigit(c))
 	{
 		return (1);
 	}
