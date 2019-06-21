@@ -6,7 +6,7 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/12 08:34:00 by jphasha           #+#    #+#             */
-/*   Updated: 2019/06/20 15:24:06 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/06/21 09:51:07 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,7 @@ int	ft_atoi(const char *str)
 	i = 0;
 	nbr = 0;
 	sign = 1;
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' ||
-			(str[i] == '\v' || str[i] == '\f' || str[i] == '\r'))
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
 	{
 		i++;
 	}
