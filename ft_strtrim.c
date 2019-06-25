@@ -6,7 +6,7 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/12 17:41:46 by jphasha           #+#    #+#             */
-/*   Updated: 2019/06/20 15:17:25 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/06/25 16:56:17 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,23 +21,24 @@ char	*ft_strtrim(char const *s)
 	size_t	j;
 
 	if (!s)
-		return (0);
-	if (s[0] == '\0')
-		return ((char *)s);	
-	i = 0;
-	/*while (((s[i] == '\t') || (s[i] == '\n') || (s[i] == ' ')) && s[i] != '\0')
-		i++;*/
-	while (s[i] != '\0' && ((s[i] >= 9 && s[i] <= 13) || s[i] == 32))
-		i++;
-	if (s[i] == '\0')
-		return (ft_strcpy(ft_strnew(1), ""));
-	/*while (s[j] != '\0')
 	{
-		j++;
+		return (0);
 	}
-	j--;*/
+	if (s[0] == '\0')
+	{
+		return ((char *)s);
+	}
+	i = 0;
+	while (s[i] != '\0' && ((s[i] >= 9 && s[i] <= 13) || s[i] == 32))
+	{
+		i++;
+	}
+	if (s[i] == '\0')
+	{
+		return (ft_strcpy(ft_strnew(1), ""));
+	}
 	j = ft_strlen(s) - 1;
-	while (((s[j] == ' ') || (s[j] == '\n') || (s[j] == '\t'	)) && j >= 0)
+	while ((s[j] == ' ' || s[j] == '\n' || s[j] == '\t') && j >= 0)
 	{
 		j--;
 	}
