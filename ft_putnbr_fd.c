@@ -6,7 +6,7 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/13 14:19:45 by jphasha           #+#    #+#             */
-/*   Updated: 2019/06/18 10:36:11 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/06/25 14:54:31 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_putnbr_fd(int n, int fd)
 			ft_putchar_fd('-', fd);
 			n = n * -1;
 		}
-		else if (n >= 10)
+		if (n >= 10)
 		{
 			ft_putnbr_fd(n / 10, fd);
 		}
