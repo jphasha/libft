@@ -6,7 +6,7 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/12 17:41:46 by jphasha           #+#    #+#             */
-/*   Updated: 2019/06/25 17:19:29 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/06/26 09:48:53 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,47 +14,28 @@
 
 char	*ft_strtrim(char const *s)
 {
-	char	*cs;
-	size_t	size;
-	size_t	x;
+	size_t	trimlen;
 	size_t	i;
 	size_t	j;
 
 	if (!s)
 	{
-		return (0);
-	}
-	if (s[0] == '\0')
-	{
-		return ((char *)s);
+		return (NULL);
 	}
 	i = 0;
-	while (s[i] != '\0' && (s[i] == '\n' || s[i] == '\t' || s[i] == '-'))
+	j = ft_strlen(s);
+	while (s[i] != '\0' && (s[i] == '\t' || s[i] == '\n' || s[i] == ' '))
 	{
 		i++;
 	}
-	if (s[i] == '\0')
-	{
-		return (ft_strcpy(ft_strnew(1), ""));
-	}
-	j = ft_strlen(s) - 1;
-	while ((s[j] == ' ' || s[j] == '\n' || s[j] == '\t') && j >= 0)
+	while (i < j && (s[j - 1] == '\t' || s[j - 1] == '\n' || s[j - 1] == ' '))
 	{
 		j--;
 	}
-	size = j - i + 1;
-	cs = (char *)malloc(sizeof(char) * (size + 1));
-	if (cs == NULL)
+	if (i - j == 0)
 	{
-		return (NULL);
+		return (ft_strnew(1));
 	}
-	x = 0;
-	while (i <= j)
-	{
-		cs[x] = s[i];
-		x++;
-		i++;
-	}
-	cs[x] = '\0';
-	return (cs);
+	trimlen = j - i;
+	return (ft_strsub(s, i, trimlen));
 }
