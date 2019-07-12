@@ -6,7 +6,7 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 23:24:42 by jphasha           #+#    #+#             */
-/*   Updated: 2019/06/22 11:25:08 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/07/12 09:57:03 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@
 # include <unistd.h>
 # include <string.h>
 # include <stdlib.h>
+# include <fcntl.h>
+# include <sys/uio.h>
+# include <sys/types.h>
+
+# define BUFF_SIZE 1
 
 void	ft_putchar(char c);
 void	ft_putchar_fd(char c, int fd);
@@ -54,6 +59,7 @@ char	*ft_strtrim(char const *s);
 char	*ft_strmap(char const *s, char (*f)(char));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	**ft_strsplit(char const *s, char c);
+int		get_next_line(const int fd, char **line);
 int		ft_atoi(const char *str);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
