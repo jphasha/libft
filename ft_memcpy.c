@@ -6,13 +6,13 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 09:20:55 by jphasha           #+#    #+#             */
-/*   Updated: 2019/06/18 16:43:37 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/07/13 00:32:03 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	unsigned char	*pdst;
 	unsigned char	*psrc;

@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/28 14:43:25 by jphasha           #+#    #+#             */
-/*   Updated: 2019/07/13 00:34:48 by jphasha          ###   ########.fr       */
+/*   Created: 2019/07/13 00:41:06 by jphasha           #+#    #+#             */
+/*   Updated: 2019/07/13 02:08:48 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char *s1, const char *s2, size_t n)
+t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	size_t i;
-	size_t j;
-
-	i = 0;
-	while (s1[i] != '\0')
+	t_list	*new_link;
+	if ((new_link = (t_list *)malloc(sizeof(*new_link) * content_size)) == NULL)
 	{
-		i++;
+		return (NULL);
 	}
-	j = 0;
-	while (s2[j] != '\0' && n > j)
+	if (content == NULL)
 	{
-		s1[i] = s2[j];
-		i++;
-		j++;
+		new_link->content = NULL;
+		new_link->content_size = 0;
 	}
-	s1[i] = '\0';
-	return (s1);
+	new_link->new = NULL;
+	return (new_link);
 }
