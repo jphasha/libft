@@ -6,7 +6,7 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 13:20:10 by jphasha           #+#    #+#             */
-/*   Updated: 2019/07/15 15:13:36 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/07/15 16:02:11 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,6 @@ void	ft_selection_sort(int *num_arr, int arr_size)
 	cur_min = 0;
 	if (arr_size <= 1)
 	{
-		return ;
-	}
-	if (num_arr[i] < 1)
-	{
-		ft_putendl_fd("Error", 2);
 		return ;
 	}
 	while (arr_size > i && num_arr[i] > 0)
