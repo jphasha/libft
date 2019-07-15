@@ -6,7 +6,7 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 23:24:42 by jphasha           #+#    #+#             */
-/*   Updated: 2019/07/13 00:48:03 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/07/15 09:56:35 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ void				ft_striter(char *s, void (*f)(char *));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 void				ft_bzero(void *s, size_t n);
 void				ft_bubble_sort(int num_arr[], int num_elm);
+void				ft_swap(int *a, int *b);
 void				*ft_memchr(const void *s, int c, size_t n);
 void				*ft_memcpy(void *dst, const void *src, size_t n);
 void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
