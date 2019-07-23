@@ -6,7 +6,7 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 23:24:42 by jphasha           #+#    #+#             */
-/*   Updated: 2019/07/22 09:28:19 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/07/23 09:28:50 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,5 +88,7 @@ typedef	struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+void				ft_lstadd(t_list **alst, t_list *new);
+t_list	*ft_lstnew(void const *content, size_t content_size);
 
 #endif
