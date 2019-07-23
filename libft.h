@@ -6,7 +6,7 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 23:24:42 by jphasha           #+#    #+#             */
-/*   Updated: 2019/07/23 09:33:08 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/07/23 10:23:51 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,17 @@
 # include <sys/types.h>
 
 # define BUFF_SIZE 1
+# define PROTECTION(x) if (!x) return (-1);
+# define SPACE(x) (x == ' ' || x == '\t')
+# define NOT_SPACE(x) (x != ' ' && x != '\t')
+# define DIGITAL_RANGE(x) (x >= '0' && x <= '9')
+# define NOT_DIGITAL_RANGE(x) (x < '0' || x > '9')
+# define ALPHA_RANGE(x) ((x >= 'A' && x <= 'Z') || (x >= 'a' && x <= 'z'))
+# define NOT_ALPHA_RANGE(x) (x < 'A' || (x > 'Z' && x < 'a') || x > 'z')
+# define LOWER_ALPHA(x) (x >= 'a' && x <= 'z')
+# define NOT_LOWER_ALPHA(x) (x < 'a' || x > 'z')
+# define UPPER_ALPHA(x) (x >= 'A' && x <= 'Z')
+# define NOT_UPPER_ALPHA(x) (x < 'A' || x > 'Z')
 
 void				ft_merge_sort(int arr_size, int *arr);
 void				ft_putchar(char c);
