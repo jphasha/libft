@@ -6,7 +6,7 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/12 11:30:51 by jphasha           #+#    #+#             */
-/*   Updated: 2019/07/22 09:18:43 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/07/23 09:08:56 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 void	ft_bubble_sort(int num_arr[], int num_elm)
 {
 	int i;
-	int swpr;
 	int swapped;
 
 	i = 0;
