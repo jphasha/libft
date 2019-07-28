@@ -6,7 +6,7 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 23:24:42 by jphasha           #+#    #+#             */
-/*   Updated: 2019/07/27 12:42:41 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/07/28 12:22:11 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,7 @@ char				*ft_strmap(char const *s, char (*f)(char));
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char				**ft_strsplit(char const *s, char c);
 int					get_next_line(const int fd, char **line);
+int					ft_array_size(int *array);
 int					ft_atoi(const char *str);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
