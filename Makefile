@@ -6,7 +6,7 @@
 #    By: jphasha <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/25 01:45:05 by jphasha           #+#    #+#              #
-#    Updated: 2019/07/28 12:20:34 by jphasha          ###   ########.fr        #
+#    Updated: 2019/08/12 14:27:56 by jphasha          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ SOURCES = ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c \
 		  ft_strmap.c ft_strmapi.c ft_strlcat.c ft_itoa.c get_next_line.c \
 		  ft_bubble_sort.c ft_swap.c ft_selection_sort.c ft_summation.c ft_lstnew.c \
 		  ft_rev_print.c int_sort_tab.c ft_lstadd.c ft_atoll.c ft_array_size.c \
+		  ft_word_cmp.c
 
 OBJECTS = ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o ft_isprint.o \
 		  ft_strcat.o ft_strncat.o ft_strcmp.o ft_strncmp.o ft_strcpy.o \
@@ -39,6 +40,7 @@ OBJECTS = ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o ft_isprint.o \
 		  ft_strmap.o ft_strmapi.o ft_strlcat.o ft_itoa.o get_next_line.o \
 		  ft_bubble_sort.o ft_swap.o ft_selection_sort.o ft_summation.o ft_lstnew.o \
 		  ft_rev_print.o int_sort_tab.o ft_lstadd.o ft_atoll.o ft_array_size.o \
+		  ft_word_cmp.o
 
 flags = -Wall -Wextra -Werror
 
