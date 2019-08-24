@@ -6,7 +6,7 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/08 18:19:43 by jphasha           #+#    #+#             */
-/*   Updated: 2019/08/12 16:38:28 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/08/24 15:40:56 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ int					ft_word_cmp(char *str)
 	char const		*str_c;
 
 	i = 0;
-	j = 0;
 	str_c = (char const *)str;
 	str_chnks = ft_strsplit(str_c, ' ');
 	if (str_chnks[1] == NULL || str_chnks[0] == NULL)
