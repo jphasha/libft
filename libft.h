@@ -6,7 +6,7 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 23:24:42 by jphasha           #+#    #+#             */
-/*   Updated: 2019/08/17 12:45:30 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/08/24 11:57:29 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,13 @@
 # define UPPER_ALPHA(x) (x >= 'A' && x <= 'Z')
 # define NOT_UPPER_ALPHA(x) (x < 'A' || x > 'Z')
 
+typedef struct		s_list
+{
+	void			*content;
+	size_t			content_size;
+	struct s_list	*next;
+}					t_list;
+void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_merge_sort(int arr_size, int *arr);
 void				ft_putchar(char c);
 void				ft_putchar_fd(char c, int fd);
@@ -97,12 +104,6 @@ int					ft_word_cmp(char *str);
 size_t				ft_strlen(const char *s);
 size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
 long long			ft_atoll(const char *str);
-typedef	struct		s_list
-{
-	void			*content;
-	size_t			content_size;
-	struct s_list	*next;
-}					t_list;
 void				ft_lstadd(t_list **alst, t_list *new);
 t_list				*ft_lstnew(void const *content, size_t content_size);
 
