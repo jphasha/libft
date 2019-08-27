@@ -6,7 +6,7 @@
 #    By: jphasha <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/25 01:45:05 by jphasha           #+#    #+#              #
-#    Updated: 2019/08/24 16:19:51 by jphasha          ###   ########.fr        #
+#    Updated: 2019/08/27 17:00:46 by jphasha          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,10 +54,10 @@ $(OBJECTS): $(SOURCES)
 	@CC -c $(flags) $(SOURCES)
 
 clean:
-	@rm -f $(OBJECTS)
+	@rm -rf $(OBJECTS) .*.swp
 
 fclean: clean
-	@rm -f $(NAME) program main.c
+	@rm -rf $(NAME) program main.c a.out
 
 re: fclean all
 

@@ -6,7 +6,7 @@
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 23:24:42 by jphasha           #+#    #+#             */
-/*   Updated: 2019/08/24 16:23:16 by jphasha          ###   ########.fr       */
+/*   Updated: 2019/08/27 16:32:18 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@
 # include <sys/types.h>
 
 # define BUFF_SIZE 1
-# define PROTECTION(x) if (!x) return (-1);
 # define SPACE(x) (x == ' ' || x == '\t')
 # define NOT_SPACE(x) (x != ' ' && x != '\t')
 # define DIGITAL_RANGE(x) (x >= '0' && x <= '9')
