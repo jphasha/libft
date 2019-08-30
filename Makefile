@@ -6,7 +6,7 @@
 #    By: jphasha <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/25 01:45:05 by jphasha           #+#    #+#              #
-#    Updated: 2019/08/30 13:47:59 by jphasha          ###   ########.fr        #
+#    Updated: 2019/08/30 16:58:37 by jphasha          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,22 +49,22 @@ flags = -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME): $(OBJECTS) 
-	@ar rc $(NAME) $(OBJECTS)
-	@ranlib $(NAME)
+	ar rc $(NAME) $(OBJECTS)
+	ranlib $(NAME)
 
 $(OBJECTS): $(SOURCES)
-	@CC -c $(flags) $(SOURCES)
+	CC -c $(flags) $(SOURCES)
 
 clean:
-	@rm -rf $(OBJECTS) .*.swp
+	rm -rf $(OBJECTS) .*.swp
 
 fclean: clean
-	@rm -rf $(NAME) program main.c a.out
+	rm -rf $(NAME) program main.c a.out
 
 re: fclean all
 
 c:
-	@gcc -o program $(flags) main.c libft.a
+	gcc -o program $(flags) main.c libft.a
 
 N:
-	@norminette $(SOURCES)
+	norminette $(SOURCES)
