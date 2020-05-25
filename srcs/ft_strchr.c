@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_loop_memdel.c                                   :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/20 14:12:53 by jphasha           #+#    #+#             */
-/*   Updated: 2019/09/20 14:24:27 by jphasha          ###   ########.fr       */
+/*   Created: 2019/06/04 16:34:52 by jphasha           #+#    #+#             */
+/*   Updated: 2019/06/19 13:27:05 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_loop_memdel(void **mem)
+char	*ft_strchr(const char *s, int c)
 {
-	int		i;
+	char	*caster;
+	char	oc;
+	size_t	i;
 
+	caster = (char *)s;
+	oc = (char)c;
 	i = 0;
-	while (mem[i] != NULL)
+	while (s[i] != oc)
 	{
-		free(mem[i]);
-		mem[i] = NULL;
+		if (caster[i] == '\0')
+		{
+			return (NULL);
+		}
 		i++;
 	}
-	free(mem);
-	mem = NULL;
+	return (caster + i);
 }

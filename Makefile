@@ -14,7 +14,7 @@ NAME = libft.a
 
 CC = gcc
 
-SOURCES = ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c \
+SRC_FILES = ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c \
 		  ft_strcat.c ft_strncat.c ft_strcmp.c ft_strncmp.c ft_strcpy.c \
 		  ft_strncpy.c ft_strlen.c ft_tolower.c ft_toupper.c ft_putchar.c \
 		  ft_putstr.c ft_putendl.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c \
@@ -25,38 +25,43 @@ SOURCES = ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c \
 		  ft_striteri.c ft_strdel.c ft_memdel.c ft_strnequ.c ft_strsplit.c \
 		  ft_strmap.c ft_strmapi.c ft_strlcat.c ft_itoa.c get_next_line.c \
 		  ft_bubble_sort.c ft_swap.c ft_selection_sort.c ft_summation.c ft_lstnew.c \
-		  ft_rev_print.c int_sort_tab.c ft_lstadd.c ft_atoll.c ft_array_size.c \
+		  ft_rev_print.c int_sort_tab.c ft_lstadd.c ft_atoll.c \
 		  ft_word_cmp.c ft_print_hex.c ft_lstdel.c ft_lstdelone.c ft_lstiter.c \
-		  ft_lstmap.c ft_loop_memdel.c ft_prnt_arr.c
+		  ft_lstmap.c ft_loop_memdel.c ft_prnt_arr.c ft_array_size.c ft_array_concat.c \
+		  ft_strisdigit.c
+SRC_PATH = srcs/
+SOURCES = $(addprefix $(SRC_PATH), $(SRC_FILES))
 
-OBJECTS = ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o ft_isprint.o \
-		  ft_strcat.o ft_strncat.o ft_strcmp.o ft_strncmp.o ft_strcpy.o \
-		  ft_strncpy.o ft_strlen.o ft_tolower.o ft_toupper.o ft_putchar.o \
-		  ft_putstr.o ft_putendl.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o \
-		  ft_strdup.o ft_strstr.o ft_strnstr.o ft_strchr.o ft_strrchr.o ft_strequ.o \
-		  ft_memchr.o ft_strclr.o ft_memcpy.o ft_memccpy.o ft_memcmp.o ft_putnbr.o \
-		  ft_memset.o ft_memmove.o ft_bzero.o ft_atoi.o ft_strnew.o ft_strsub.o \
-		  ft_strjoin.o ft_strtrim.o ft_putnbr_fd.o ft_memalloc.o ft_striter.o \
-		  ft_striteri.o ft_strdel.o ft_memdel.o ft_strnequ.o ft_strsplit.o \
-		  ft_strmap.o ft_strmapi.o ft_strlcat.o ft_itoa.o get_next_line.o \
-		  ft_bubble_sort.o ft_swap.o ft_selection_sort.o ft_summation.o ft_lstnew.o \
-		  ft_rev_print.o int_sort_tab.o ft_lstadd.o ft_atoll.o ft_array_size.o \
-		  ft_word_cmp.o ft_print_hex.o ft_lstdel.o ft_lstdelone.o ft_lstiter.o \
-		  ft_lstmap.o ft_loop_memdel.o ft_prnt_arr.o
+OBJS_PATH = objs/
+OBJS_DIRS = $(addprefix $(OBJS_PATH), libft_obj/)
+OBJECTS = $(addprefix $(OBJS_DIRS), $(SRC_FILES:.c=.o))
+
+INCLUDES_PATH = includes/
+INCLUDES = -I $(INCLUDES_PATH)
+
+HEADER_FILES = libft.h
+HEADERS = $(addprefix $(INCLUDES_PATH), $(HEADER_FILES))
 
 flags = -Wall -Wextra -Werror
 
 all: $(NAME)
 
+$(OBJS_DIRS)%.o: $(SRC_PATH)%.c $(HEADERS)
+	mkdir $(OBJS_PATH) 2> /dev/null || true
+	mkdir $(OBJS_DIRS) 2> /dev/null || true
+	$(CC) $(flags) $(INCLUDES) -o $@ -c $<
+
 $(NAME): $(OBJECTS) 
 	ar rc $(NAME) $(OBJECTS)
 	ranlib $(NAME)
 
-$(OBJECTS): $(SOURCES)
-	$(CC) -c $(flags) $(SOURCES)
+# $(OBJECTS): $(SOURCES)
+# 	$(CC) -c $(flags) $(SOURCES)
 
 clean:
 	rm -rf $(OBJECTS) .*.swp
+	rmdir $(OBJS_DIRS) 2> /dev/null || true
+	rmdir $(OBJS_PATH) 2> /dev/null || true
 
 fclean: clean
 	rm -rf $(NAME) program main.c a.out

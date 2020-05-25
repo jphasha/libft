@@ -1,32 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_array_size.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/28 10:36:04 by jphasha           #+#    #+#             */
-/*   Updated: 2019/05/28 11:47:52 by jphasha          ###   ########.fr       */
+/*   Created: 2019/07/28 12:18:19 by jphasha           #+#    #+#             */
+/*   Updated: 2019/09/20 15:30:21 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcat(char *restrict s1, const char *restrict s2)
-{
-	int i;
-	int j;
+#include "libft.h"
 
-	i = 0;
-	while (s1[i] != '\0')
-	{
-		i++;
-	}
-	j = 0;
-	while (s2[j] != '\0')
-	{
-		s1[i] = s2[j];
-		i++;
-		j++;
-	}
-	s1[i] = '\0';
-	return (s1);
+int			ft_array_size(char **array)
+{
+	int		size;
+
+	size = 0;
+	if (array)
+		while (array[size])
+			size++;
+	return (size);
 }

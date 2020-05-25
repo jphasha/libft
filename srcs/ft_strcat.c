@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_array_size.c                                    :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jphasha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/28 12:18:19 by jphasha           #+#    #+#             */
-/*   Updated: 2019/09/20 15:30:21 by jphasha          ###   ########.fr       */
+/*   Created: 2019/05/28 10:36:04 by jphasha           #+#    #+#             */
+/*   Updated: 2019/05/28 11:47:52 by jphasha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_array_size(int *array)
+char	*ft_strcat(char *restrict s1, const char *restrict s2)
 {
-	int		size;
+	int i;
+	int j;
 
-	size = 0;
-	//this function gives off highly unreliable data.
-	//especially data at sizeof(array);
-	//so let's avoid using it until i can debug it.
-	if (sizeof(array[0]) < 1)
-		return (0);
-	size = sizeof(array) / sizeof(array[0]);
-	return (size);
+	i = ft_strlen(s1);
+	j = 0;
+	while (s2[j] != '\0')
+	{
+		s1[i] = s2[j];
+		i++;
+		j++;
+	}
+	s1[i] = '\0';
+	return (s1);
 }
